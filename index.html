@@ -1174,6 +1174,15 @@
                                 <span class="text-white text-lg font-bold">View Assignment</span>
                             </div>
                         </div>
+
+                        <!-- Assignment 10 -->
+                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment10')">
+                            <img src="images/zelfreflectie.jpg" alt="Assignment 10" class="w-full h-64 object-cover rounded-lg">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                                <span class="text-white text-lg font-bold">View Assignment</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section><!-- Assignment Modal -->
@@ -1196,14 +1205,41 @@
                 </div>
             </div>
             <script> 
-                function openAssignmentModal(assignmentId) { 
-                    const modal = document.getElementById('assignmentModal'); 
-                    const modalContent = document.getElementById('assignmentModalContent'); 
-                    modalContent.innerHTML = ''; 
-                        if (assignmentId === 'assignment1') 
-                            { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 01: Imaginary Nation Project</h3> <p class="text-gray-300 mt-2">A presentation on creating a fictional nation with unique internet access regulations.</p> <iframe id="assignmentIframe" src="./project/ßléhgïë.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment2') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 02: AVG Overview</h3> <p class="text-gray-300 mt-2">A detailed presentation on the General Data Protection Regulation (AVG).</p> <iframe id="assignmentIframe" src="./project/AVG.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment3') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 03: Killer Drones Analysis</h3> <p class="text-gray-300 mt-2">An analysis of the ethical pros and cons of autonomous killer drones.</p> <iframe id="assignmentIframe" src="./project/ProConsKillerDrones.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment4') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 04: ChatGPT Mindmap</h3> <p class="text-gray-300 mt-2">A mindmap exploring the implications of ChatGPT under specific constraints.</p> <iframe id="assignmentIframe" src="./project/ChatGptMindMap.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment5') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Edomundo Portfolio</h3> <p class="text-gray-300 mt-2">A collection of assignments completed during the first semester.</p> <iframe id="assignmentIframe" src="./project/edomundo.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment6') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Research Proposal</h3> <p class="text-gray-300 mt-2">A comprehensive research proposal developed as part of the course.</p> <iframe id="assignmentIframe" src="./project/Onderzoeksvoorstel.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment7') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Burndown Chart</h3> <p class="text-gray-300 mt-2">A visual representation of project progress using a burndown chart.</p> <iframe id="assignmentIframe" src="./project/BurndownChart.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment8') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Personal Development Plan (POP)</h3> <p class="text-gray-300 mt-2">A signed and completed Personal Development Plan outlining my growth objectives.</p> <iframe id="assignmentIframe" src="./project/POP.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } else if (assignmentId === 'assignment9') { modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">POP Evidence</h3> <p class="text-gray-300 mt-2">Documentation and evidence supporting my Personal Development Plan goals.</p> <iframe id="assignmentIframe" src="./project/PopBewijslast.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `; } modal.classList.remove('hidden'); } function closeAssignmentModal() { const modal = document.getElementById('assignmentModal'); modal.classList.add('hidden'); } // Fullscreen Toggle Function (Reused from Certificates) function toggleFullscreen(iframeId) { const iframe = document.getElementById(iframeId); if (!iframe) return; if (!document.fullscreenElement) { if (iframe.requestFullscreen) { iframe.requestFullscreen(); } else if (iframe.mozRequestFullScreen) { // Firefox iframe.mozRequestFullScreen(); } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera iframe.webkitRequestFullscreen(); } else if (iframe.msRequestFullscreen) { // IE/Edge iframe.msRequestFullscreen(); } } else { if (document.exitFullscreen) { document.exitFullscreen(); } else if (document.mozCancelFullScreen) { // Firefox document.mozCancelFullScreen(); } else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera document.webkitExitFullscreen(); } else if (document.msExitFullscreen) { // IE/Edge document.msExitFullscreen(); } } } </script>
-        </main>
-    </div>
+                    function openAssignmentModal(assignmentId) {
+        const modal = document.getElementById('assignmentModal');
+        const modalContent = document.getElementById('assignmentModalContent');
+        modalContent.innerHTML = '';
+        if (assignmentId === 'assignment1') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 01: Imaginary Nation Project</h3> <p class="text-gray-300 mt-2">A presentation on creating a fictional nation with unique internet access regulations.</p> <iframe id="assignmentIframe" src="./project/ßléhgïë.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment2') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 02: AVG Overview</h3> <p class="text-gray-300 mt-2">A detailed presentation on the General Data Protection Regulation (AVG).</p> <iframe id="assignmentIframe" src="./project/AVG.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment3') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 03: Killer Drones Analysis</h3> <p class="text-gray-300 mt-2">An analysis of the ethical pros and cons of autonomous killer drones.</p> <iframe id="assignmentIframe" src="./project/ProConsKillerDrones.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment4') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 04: ChatGPT Mindmap</h3> <p class="text-gray-300 mt-2">A mindmap exploring the implications of ChatGPT under specific constraints.</p> <iframe id="assignmentIframe" src="./project/ChatGptMindMap.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment5') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Edomundo Portfolio</h3> <p class="text-gray-300 mt-2">A collection of assignments completed during the first semester.</p> <iframe id="assignmentIframe" src="./project/edomundo.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment6') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Research Proposal</h3> <p class="text-gray-300 mt-2">A comprehensive research proposal developed as part of the course.</p> <iframe id="assignmentIframe" src="./project/Onderzoeksvoorstel.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment7') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Burndown Chart</h3> <p class="text-gray-300 mt-2">A visual representation of project progress using a burndown chart.</p> <iframe id="assignmentIframe" src="./project/BurndownChart.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment8') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Personal Development Plan (POP)</h3> <p class="text-gray-300 mt-2">A signed and completed Personal Development Plan outlining my growth objectives.</p> <iframe id="assignmentIframe" src="./project/POP.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment9') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">POP Evidence</h3> <p class="text-gray-300 mt-2">Documentation and evidence supporting my Personal Development Plan goals.</p> <iframe id="assignmentIframe" src="./project/PopBewijslast.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment10') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Reflection</h3> <p class="text-gray-300 mt-2">A self reflection about semester 1 of year 2</p> <iframe id="assignmentIframe" src="./project/Reflectieverslag.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        }
+        modal.classList.remove('hidden');
+    }
+
+    function closeAssignmentModal() {
+        const modal = document.getElementById('assignmentModal');
+        modal.classList.add('hidden');
+    }
+    
+    </script>    
+</div>
 
 </body>
 
