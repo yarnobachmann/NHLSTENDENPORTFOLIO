@@ -1183,6 +1183,15 @@
                                 <span class="text-white text-lg font-bold">View Assignment</span>
                             </div>
                         </div>
+
+                        <!-- Assignment 11 -->
+                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment11')">
+                            <img src="images/feedback.jpg" alt="Assignment 11" class="w-full h-64 object-cover rounded-lg">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                                <span class="text-white text-lg font-bold">View Assignment</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section><!-- Assignment Modal -->
@@ -1229,6 +1238,8 @@
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">POP Evidence</h3> <p class="text-gray-300 mt-2">Documentation and evidence supporting my Personal Development Plan goals.</p> <iframe id="assignmentIframe" src="./project/PopBewijslast.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
         } else if (assignmentId === 'assignment10') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Reflection</h3> <p class="text-gray-300 mt-2">A self reflection about semester 1 of year 2</p> <iframe id="assignmentIframe" src="./project/Reflectieverslag.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        } else if (assignmentId === 'assignment11') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Feedback</h3> <p class="text-gray-300 mt-2">Feedback from all the project members of semester 1.</p> <iframe id="assignmentIframe" src="./project/Feedback.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
         }
         modal.classList.remove('hidden');
     }
