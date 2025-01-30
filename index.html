@@ -88,6 +88,12 @@
         .animate-progress:nth-child(4) {
             animation-delay: 0.8s;
         }
+
+        .titleBox {
+            background-color: #000000b8;
+            padding: 2rem;
+            margin: 3rem;
+        }
     </style>
 </head>
 
@@ -132,19 +138,24 @@
         <main id="Home" class="w-3/4 p-8 overflow-y-auto bg-gray-900">
             <!-- Hero Section -->
             <section class="bg-cover bg-center h-screen flex items-center relative"
-                style="background-image: url('images/bg.jpg');">
+                style="background-image: url('images/bg.jpg'); justify-content: center;">
                 <!-- Gradient Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
 
-                <div class="container mx-auto text-center relative z-10">
+                <div class="container mx-auto text-center relative z-10 titleBox" >
                     <!-- Animated Heading -->
                     <h1 class="text-5xl md:text-6xl font-bold text-gray-100 animate-fade-in-up">
                         Hi! I'm Yarno
                     </h1>
                     <!-- Animated Subtitle -->
                     <p class="text-xl md:text-2xl text-gray-300 mt-4 animate-fade-in-up delay-100">
-                        Junior Developer based in the Netherlands
+                        Junior Developer based in the Netherlands <br>
+                        <a href="#Assignment" class="text-xl md:text-2xl text-gray-300 mt-4 animate-fade-in-up delay-100">
+                            <small><u><i>Click here for Professional skill assignments.</i></u></small>
+                        </a>
                     </p>
+
+                    
                 </div>
             </section>
 
@@ -1091,9 +1102,13 @@
                     <h2 class="text-3xl font-bold text-center text-gray-100">School Assignments</h2>
                     <p class="text-center text-gray-400 mt-4">Explore the assignments I've completed as part of my
                         Professional Skills course.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"> <!-- Assignment 1 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment1')"> <img
-                                src="images/Blehgie.png" alt="Assignment 1" class="w-full h-64 object-cover rounded-lg">
+                    <!-- Assignment 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"> 
+                        
+                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment1')">
+                            <p class="text-center text-gray-400"><b>Ethics</b></p> 
+                            <img
+                                src="images/etiek.jpg" alt="Assignment 1" class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span> </div>
@@ -1101,7 +1116,9 @@
 
                         <!-- Assignment 2 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment2')">
-                            <img src="images/avg.png" alt="Assignment 2" class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>Edomundo</b></p> 
+                            <img src="images/edomundo.png" alt="Assignment 2"
+                                class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1110,7 +1127,9 @@
 
                         <!-- Assignment 3 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment3')">
-                            <img src="images/drones.png" alt="Assignment 3" class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>Research</b></p> 
+                            <img src="images/research.png" alt="Assignment 3"
+                                class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1119,7 +1138,8 @@
 
                         <!-- Assignment 4 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment4')">
-                            <img src="images/chatgpt.jpg" alt="Assignment 4"
+                            <p class="text-center text-gray-400"><b>Burndown Charts</b></p> 
+                            <img src="images/Burndown.png" alt="Assignment 4"
                                 class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -1129,8 +1149,8 @@
 
                         <!-- Assignment 5 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment5')">
-                            <img src="images/edomundo.png" alt="Assignment 5"
-                                class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>POP With proof</b></p> 
+                            <img src="images/pop.png" alt="Assignment 5" class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1139,8 +1159,8 @@
 
                         <!-- Assignment 6 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment6')">
-                            <img src="images/research.png" alt="Assignment 6"
-                                class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>Reflection paper</b></p> 
+                            <img src="images/zelfreflectie.jpg" alt="Assignment 6" class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1149,8 +1169,8 @@
 
                         <!-- Assignment 7 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment7')">
-                            <img src="images/Burndown.png" alt="Assignment 7"
-                                class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>Feedback</b></p> 
+                            <img src="images/feedback.jpg" alt="Assignment 7" class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1159,43 +1179,8 @@
 
                         <!-- Assignment 8 -->
                         <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment8')">
-                            <img src="images/pop.png" alt="Assignment 8" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 9 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment9')">
-                            <img src="images/pop.png" alt="Assignment 9" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 10 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment10')">
-                            <img src="images/zelfreflectie.jpg" alt="Assignment 10" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 11 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment11')">
-                            <img src="images/feedback.jpg" alt="Assignment 11" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 12 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment12')">
-                            <img src="images/engels.jpg" alt="Assignment 12" class="w-full h-64 object-cover rounded-lg">
+                            <p class="text-center text-gray-400"><b>English</b></p> 
+                            <img src="images/engels.jpg" alt="Assignment 8" class="w-full h-64 object-cover rounded-lg">
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
                                 <span class="text-white text-lg font-bold">View Assignment</span>
@@ -1228,28 +1213,20 @@
         const modalContent = document.getElementById('assignmentModalContent');
         modalContent.innerHTML = '';
         if (assignmentId === 'assignment1') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 01: Imaginary Nation Project</h3> <p class="text-gray-300 mt-2">A presentation on creating a fictional nation with unique internet access regulations.</p> <iframe id="assignmentIframe" src="./project/ßléhgïë.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics: All 4 ethics assignments: 2 presentations, 1 mindmap and proscons of killer drones.</h3> <p class="text-gray-300 mt-2">All completed ethics assignments</p> <iframe id="assignmentIframe" src="./project/Etiek.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
         } else if (assignmentId === 'assignment2') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 02: AVG Overview</h3> <p class="text-gray-300 mt-2">A detailed presentation on the General Data Protection Regulation (AVG).</p> <iframe id="assignmentIframe" src="./project/AVG.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment3') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 03: Killer Drones Analysis</h3> <p class="text-gray-300 mt-2">An analysis of the ethical pros and cons of autonomous killer drones.</p> <iframe id="assignmentIframe" src="./project/ProConsKillerDrones.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment4') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics 04: ChatGPT Mindmap</h3> <p class="text-gray-300 mt-2">A mindmap exploring the implications of ChatGPT under specific constraints.</p> <iframe id="assignmentIframe" src="./project/ChatGptMindMap.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment5') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Edomundo Portfolio</h3> <p class="text-gray-300 mt-2">A collection of assignments completed during the first semester.</p> <iframe id="assignmentIframe" src="./project/edomundo.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment6') {
+        } else if (assignmentId === 'assignment3') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Research Proposal</h3> <p class="text-gray-300 mt-2">A comprehensive research proposal developed as part of the course.</p> <iframe id="assignmentIframe" src="./project/Onderzoeksvoorstel.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment7') {
+        } else if (assignmentId === 'assignment4') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Burndown Chart</h3> <p class="text-gray-300 mt-2">A visual representation of project progress using a burndown chart.</p> <iframe id="assignmentIframe" src="./project/BurndownChart.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment8') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Personal Development Plan (POP)</h3> <p class="text-gray-300 mt-2">A signed and completed Personal Development Plan outlining my growth objectives.</p> <iframe id="assignmentIframe" src="./project/POP.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment9') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">POP Evidence</h3> <p class="text-gray-300 mt-2">Documentation and evidence supporting my Personal Development Plan goals.</p> <iframe id="assignmentIframe" src="./project/PopBewijslast.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment10') {
+        } else if (assignmentId === 'assignment5') {
+            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Personal Development Plan (POP) And proof of finishing</h3> <p class="text-gray-300 mt-2">A signed and completed Personal Development Plan outlining my growth objectives and de proof of finishing</p> <iframe id="assignmentIframe" src="./project/POP.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
+        }  else if (assignmentId === 'assignment6') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Reflection</h3> <p class="text-gray-300 mt-2">A self reflection about semester 1 of year 2</p> <iframe id="assignmentIframe" src="./project/Reflectieverslag.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment11') {
+        } else if (assignmentId === 'assignment7') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Feedback</h3> <p class="text-gray-300 mt-2">Feedback from all the project members of semester 1.</p> <iframe id="assignmentIframe" src="./project/Feedback.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment12') {
+        } else if (assignmentId === 'assignment8') {
             modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Engels</h3> <p class="text-gray-300 mt-2">Feedback from the English lessons.</p> <iframe id="assignmentIframe" src="./project/English.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
         }
         modal.classList.remove('hidden');
