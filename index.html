@@ -528,12 +528,9 @@
           modal.classList.remove('fullscreen');
           updateNavButtons();
         } else {
-          photoModal.style.display = 'none';
-          iframe.style.display = 'block';
-          iframe.src = src;
-          prevBtn.style.display = 'none';
-          nextBtn.style.display = 'none';
-          modal.classList.add('fullscreen');
+          // Open PDFs in new tab instead of modal
+          window.open(src, '_blank');
+          return;
         }
         
         overlay.classList.add('active');
@@ -600,6 +597,8 @@
             break;
         }
       });
+
+      // No need for complex history handling anymore
 
       // Certificate and assignment modals
       const certMap = { EssentialSecurity: 'EssentialSecurity.pdf', EssentialSpecialties: 'EssentialSpecialties.pdf', SafeInternet: 'SafeInternet.pdf', SafeInternetPlus: 'SafeInternetPlus.pdf', SecuritySpecialist: 'SecuritySpecialist.pdf', Cpp: 'c++.pdf', OnlineMarketing: 'onlineMarketing.pdf' };
