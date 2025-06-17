@@ -134,13 +134,55 @@
       <section id="certificates" data-aos="fade-up">
         <h2 class="section-title">Certificaten</h2>
         <div class="grid">
-          <div class="grid-item" data-cert="EssentialSecurity"><img src="images/EssentialSecurity.png" alt="EssSec" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="EssentialSpecialties"><img src="images/EssentialSpecialties.png" alt="EssSpec" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="SafeInternet"><img src="images/SafeInternet.png" alt="SafeNet" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="SafeInternetPlus"><img src="images/SafeInternetPlus.png" alt="SafePlus" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="SecuritySpecialist"><img src="images/SecuritySpecialist.png" alt="SecSpec" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="Cpp"><img src="images/c++.jpg" alt="C++" /><div class="overlay">Bekijk</div></div>
-          <div class="grid-item" data-cert="OnlineMarketing"><img src="images/onlineMarketing.png" alt="Marketing" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="EssentialSecurity">
+            <img src="images/EssentialSecurity.png" alt="Essential Security" />
+            <div class="overlay">
+              <h3>Essential Security</h3>
+              <p>Cybersecurity</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="EssentialSpecialties">
+            <img src="images/EssentialSpecialties.png" alt="Essential Specialties" />
+            <div class="overlay">
+              <h3>Essential Specialties</h3>
+              <p>Specialisaties</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="SafeInternet">
+            <img src="images/SafeInternet.png" alt="Safe Internet" />
+            <div class="overlay">
+              <h3>Safe Internet</h3>
+              <p>Online Veiligheid</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="SafeInternetPlus">
+            <img src="images/SafeInternetPlus.png" alt="Safe Internet Plus" />
+            <div class="overlay">
+              <h3>Safe Internet Plus</h3>
+              <p>Online Veiligheid</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="SecuritySpecialist">
+            <img src="images/SecuritySpecialist.png" alt="Security Specialist" />
+            <div class="overlay">
+              <h3>Security Specialist</h3>
+              <p>Online Veiligheid</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="Cpp">
+            <img src="images/c++.jpg" alt="C++ Certificaat" />
+            <div class="overlay">
+              <h3>C++ Programming</h3>
+              <p>Development</p>
+            </div>
+          </div>
+          <div class="grid-item" data-cert="OnlineMarketing">
+            <img src="images/onlineMarketing.png" alt="Online Marketing" />
+            <div class="overlay">
+              <h3>Online Marketing</h3>
+              <p>Digital Marketing</p>
+            </div>
+          </div>
                 </div>
             </section>
 
@@ -148,10 +190,34 @@
       <section id="assignments" data-aos="fade-up">
         <h2 class="section-title">Opdrachten</h2>
         <div class="grid">
-          <div class="grid-item" data-assignment="Edumundo"><img src="images/edomundo.png" alt="Edumundo" /><div class="overlay">Open</div></div>
-          <div class="grid-item" data-assignment="POP"><img src="images/pop.png" alt="POP" /><div class="overlay">Open</div></div>
-          <div class="grid-item" data-assignment="Reflection"><img src="images/zelfreflectie.jpg" alt="Reflection" /><div class="overlay">Open</div></div>
-          <div class="grid-item" data-assignment="CV"><img src="images/cv.jpg" alt="CV" /><div class="overlay">Open</div></div>
+          <div class="grid-item" data-assignment="Edumundo">
+            <img src="images/edomundo.png" alt="Edumundo" />
+            <div class="overlay">
+              <h3>Edumundo</h3>
+              <p>Project Rapport</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="POP">
+            <img src="images/pop.png" alt="POP" />
+            <div class="overlay">
+              <h3>POP</h3>
+              <p>Ontwikkelplan</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="Reflection">
+            <img src="images/zelfreflectie.jpg" alt="Reflectieverslag" />
+            <div class="overlay">
+              <h3>Reflectieverslag</h3>
+              <p>Zelfreflectie</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="CV">
+            <img src="images/cv.jpg" alt="Curriculum Vitae" />
+            <div class="overlay">
+              <h3>Curriculum Vitae</h3>
+              <p>CV 2025</p>
+            </div>
+          </div>
                 </div>
             </section>
 
@@ -451,12 +517,15 @@
       const openModal = (src, isPhoto = false) => {
         if (!src) return;
         
+        const modal = overlay.querySelector('.modal');
+        
         if (isPhoto) {
           iframe.style.display = 'none';
           photoModal.style.display = 'block';
           photoModal.src = src;
           prevBtn.style.display = 'block';
           nextBtn.style.display = 'block';
+          modal.classList.remove('fullscreen');
           updateNavButtons();
         } else {
           photoModal.style.display = 'none';
@@ -464,6 +533,7 @@
           iframe.src = src;
           prevBtn.style.display = 'none';
           nextBtn.style.display = 'none';
+          modal.classList.add('fullscreen');
         }
         
         overlay.classList.add('active');
