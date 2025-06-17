@@ -417,6 +417,13 @@ section{padding:3rem 0;}
   }
 }
 
+/* Hide hero logo on screens smaller than 1400px */
+@media (max-width: 1400px) {
+  .hero-logo {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .photo-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -435,11 +442,6 @@ section{padding:3rem 0;}
   
   #photography {
     padding: 2rem 0.5rem;
-  }
-  
-  /* Hide hero logo on mobile */
-  .hero-logo {
-    display: none;
   }
   
   /* Better text wrapping for hero title on mobile */
