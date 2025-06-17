@@ -1,1245 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yarno Bachmann</title>
-    <meta name="description" content="Portfolio of Yarno Bachmann, a Junior Developer based in the Netherlands.">
-    <meta name="keywords" content="developer, portfolio, web design, software">
-    <meta name="author" content="Yarno Bachmann">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">    
-
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Ensure the sidebar is fixed and takes the full height of the viewport */
-        aside {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh; /* Full viewport height */
-            overflow-y: auto; /* Enable scrolling for the sidebar */
-            width: fit-content; /* Adjust width to fit content */
-            z-index: 1000; /* Ensure it stays above other content */
-        }
-
-        /* Adjust the main content to account for the fixed sidebar */
-        main {
-            margin-left: 25%; /* Match the width of the sidebar */
-            width: 75%; /* Adjust width to fill the remaining space */
-        }
-
-        /* Animations */
-        @keyframes fade-in-up {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fade-in-up 1s ease-out forwards;
-        }
-
-        .delay-100 {
-            animation-delay: 0.1s;
-        }
-
-        .delay-200 {
-            animation-delay: 0.2s;
-        }
-
-        /* Progress Bar Animation */
-        @keyframes progress {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: var(--progress-width);
-            }
-        }
-
-        .animate-progress {
-            animation: progress 1.5s ease-out forwards;
-        }
-
-        .animate-progress:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .animate-progress:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .animate-progress:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .animate-progress:nth-child(4) {
-            animation-delay: 0.8s;
-        }
-
-        .titleBox {
-            background-color: #000000b8;
-            padding: 2rem;
-            margin: 3rem;
-        }
-    </style>
+  <link rel="stylesheet" href="css/modern.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
-
-<body class="bg-gray-900 text-gray-900 font-sans">
-
-    <!-- Main Container -->
-    <div class="flex min-h-screen bg-gray-900 ">
-        <!-- Sidebar -->
-        <aside class="w-1/4 bg-gray-600 text-gray-200 p-6"  style="width: fit-content;">
-            <div class="text-center">
-                <div class="w-32 h-32 mx-auto bg-cover bg-center rounded-full"
-                    style="background-image: url('images/about.jpg');"></div>
-                <h1 class="text-2xl font-bold mt-4"><a href="index.html" class="hover:text-gray-400">Yarno Bachmann</a>
-                </h1>
-                <p class="text-gray-400">Junior Developer in the Netherlands</p>
-            </div>
-            <nav class="mt-8">
-                <ul class="space-y-4">
-                    <li><a href="#Home" class="block hover:text-gray-400">Home</a></li>
-                    <li><a href="#About" class="block hover:text-gray-400">About me</a></li>
-                    <li><a href="#Service" class="block hover:text-gray-400">Services</a></li>
-                    <li><a href="#Skill" class="block hover:text-gray-400">Skills</a></li>
-                    <li><a href="#Edu" class="block hover:text-gray-400">Education</a></li>
-                    <li><a href="#Intern" class="block hover:text-gray-400">Internships</a></li>
-                    <li><a href="#Exp" class="block hover:text-gray-400">Experience</a></li>
-                    <li><a href="#Certif" class="block hover:text-gray-400">Certificates</a></li>
-                    <li><a href="#Assignment" class="block hover:text-gray-400">Assignments</a></li>
+<body>
+  <!-- ===== SIDEBAR ===== -->
+  <aside id="sidebar">
+    <div>
+      <div class="logo">YB</div>
+      <div class="profile-pic-bg" aria-label="Profielfoto van Yarno Bachmann"></div>
+      <nav>
+        <ul>
+          <li><a href="#hero" data-number="01.">Intro</a></li>
+          <li><a href="#about" data-number="02.">Over mij</a></li>
+          <li><a href="#experience" data-number="03.">Ervaring</a></li>
+          <li><a href="#certificates" data-number="04.">Certificaten</a></li>
+          <li><a href="#assignments" data-number="05.">Opdrachten</a></li>
+          <li><a href="#contact" data-number="06.">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mt-8 text-center text-gray-400">
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear());</script> Yarno Bachmann
-                </p>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="#" class="hover:text-white"><i class="icon-instagram"></i></a>
-                    <a href="#" class="hover:text-white"><i class="icon-linkedin2"></i></a>
                 </div>
+    <div class="social">
+      <a href="https://github.com/yarnobachmann" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-feather="github"></i></a>
+      <a href="https://www.linkedin.com/in/yarnobachmann/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
             </div>
         </aside>
 
-        <!-- Main Content -->
-        <main id="Home" class="w-3/4 p-8 overflow-y-auto bg-gray-900">
-            <!-- Hero Section -->
-            <section class="bg-cover bg-center h-screen flex items-center relative"
-                style="background-image: url('images/bg.jpg'); justify-content: center;">
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
-
-                <div class="container mx-auto text-center relative z-10 titleBox" >
-                    <!-- Animated Heading -->
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-100 animate-fade-in-up">
-                        Hi! I'm Yarno
-                    </h1>
-                    <!-- Animated Subtitle -->
-                    <p class="text-xl md:text-2xl text-gray-300 mt-4 animate-fade-in-up delay-100">
-                        Junior Developer based in the Netherlands <br>
-                        <a href="#Assignment" class="text-xl md:text-2xl text-gray-300 mt-4 animate-fade-in-up delay-100">
-                            <small><u><i>Click here for Professional skill assignments.</i></u></small>
-                        </a>
-                    </p>
-
-                    
+  <!-- ===== MAIN ===== -->
+  <div class="content-wrapper">
+    <section id="hero" style="background-image: url('images/new/me_turned_around.jpeg');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>Hoi, ik ben <span class="name-hover-trigger"><span class="name-animated">Y</span><span class="name-animated">a</span><span class="name-animated">r</span><span class="name-animated">n</span><span class="name-animated">o</span></span>.</h1>
+        <p>Een gepassioneerde developer die digitale ervaringen bouwt met focus op performance, toegankelijkheid en plezier.</p>
+        <a href="#about" class="button-primary">Bekijk mijn werk ↓</a>
                 </div>
             </section>
 
-            <!-- Custom CSS for Animations -->
-            <style>
-                @keyframes fade-in-up {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .animate-fade-in-up {
-                    animation: fade-in-up 1s ease-out forwards;
-                }
-
-                .delay-100 {
-                    animation-delay: 0.1s;
-                }
-
-                .delay-200 {
-                    animation-delay: 0.2s;
-                }
-            </style>
-
-            <!-- About Section -->
-            <section id="About" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">About Me</h2>
-                    <p class="text-center text-gray-400 mt-4">Hi, I'm Yarno Bachmann, a Junior Developer with a passion
-                        for building web applications, capturing moments, and exploring virtual worlds.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                        <!-- Photography Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">📸</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Photography</h3>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    Capturing moments that tell stories, from landscapes to portraits.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Cinematography Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">🎥</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Cinematography</h3>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    Crafting visual narratives through the art of filmmaking.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Programming Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">💻</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Programming</h3>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    Building robust and scalable applications to solve real-world problems.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Gaming Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">🎮</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Gaming</h3>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    Exploring virtual worlds and mastering the art of strategy and teamwork.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <main>
+      <!-- About -->
+      <section id="about" data-aos="fade-up">
+        <h2 class="section-title">Over mij</h2>
+        <p>Momenteel student Informatica (NHL Stenden) &amp; freelance ontwikkelaar. Ik bouw web- en VR-oplossingen, experimenteer graag met nieuwe technologie en leg momenten vast met fotografie.</p>
             </section>
-            <!-- Services Section -->
-            <section id="Service" class="bg-gray-900 py-20">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">Services</h2>
-                    <p class="text-center text-gray-400 mt-4">Here are the services I offer to help bring your ideas to
-                        life.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                        <!-- Web Design Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">🌐</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Web Design</h3>
-                            <p class="mt-2 text-gray-300">Crafting stunning and responsive websites.</p>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    I design and develop visually appealing, user-friendly websites that are optimized
-                                    for all devices. From concept to launch, I ensure your website stands out.
-                                </p>
-                            </div>
-                        </div>
 
-                        <!-- Phone Applications Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">📱</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">Phone Applications</h3>
-                            <p class="mt-2 text-gray-300">Building interactive mobile apps.</p>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    I create high-performance mobile applications for Android. From intuitive
-                                    UI/UX design to seamless functionality, I deliver apps that users love.
-                                </p>
+      <!-- Education -->
+      <section id="education" data-aos="fade-up">
+        <h2 class="section-title">Opleidingen</h2>
+        <div class="card expandable">
+          <div class="card-content"><h3>Informatica — IT Bachelor</h3><p>NHL Stenden, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2023–heden</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Propedeuse behaald. Focus op software engineering, web development, en database management.</p></div>
                             </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Lerarenopleiding Technisch Beroepsonderwijs</h3><p>Windesheim, Zwolle</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2020–2022</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Opleiding om lesgevers te trainen voor het geven van technisch onderwijs aan MBO-studenten.</p></div>
                         </div>
-
-                        <!-- VR Applications Card -->
-                        <div
-                            class="text-center p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden">
-                            <span
-                                class="text-4xl text-blue-400 group-hover:text-blue-500 transition-colors duration-300">🕶️</span>
-                            <h3 class="text-xl font-bold mt-4 text-gray-100">VR Applications</h3>
-                            <p class="mt-2 text-gray-300">Developing immersive virtual reality experiences.</p>
-                            <div
-                                class="absolute inset-0 bg-gray-800 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
-                                <p class="text-gray-300">
-                                    I specialize in creating immersive VR applications for gaming, training, and
-                                    simulations. Using cutting-edge technology, I bring virtual worlds to life.
-                                </p>
+        <div class="card expandable">
+          <div class="card-content"><h3>Pabo</h3><p>NHL Stenden, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2020</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Opleiding voor basisonderwijs, gespecialiseerd in informatica.</p></div>
                             </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Applicatie Ontwikkelaar — Niveau 4 MBO</h3><p>Drenthe College, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2016–2019</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Opleiding om applicaties te ontwikkelen voor MBO-niveau 4.</p></div>
                         </div>
-                    </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Netwerk Beheer — Niveau 4 MBO</h3><p>Drenthe College, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2015–2016</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Opleiding om netwerken te beheren voor MBO-niveau 4.</p></div>
                 </div>
             </section>
 
-            <!-- Skills Section -->
-<section id="Skill" class="py-20 bg-gray-900">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center text-gray-100">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <!-- Skill: HTML5 -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🖥️</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">HTML5</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="85"></div>
+      <!-- Experience -->
+      <section id="experience" data-aos="fade-up">
+        <h2 class="section-title">Stages</h2>
+        <div class="card expandable">
+          <div class="card-content"><h3>Docent</h3><p>Drenthe College, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2020–2022</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Verzorgen van lessen in SQL en PHP aan MBO-studenten, alsmede het geven van voorlichting over stageperiodes.</p></div>
                         </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Programmeur (Eindopdracht SCRUM)</h3><p>Dhevak, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2018–2019</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Ontwikkeling van een mobiele AR-app met Unity, C#, Android en ARCore voor een interactieve culturele route in Emmen.</p></div>
                     </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Programmeur</h3><p>Laravel project, SQL, Blade, API's – Dhevak, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2017–2018</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Ontwikkeling van een Laravel-project, gebruik van SQL, Blade-templates en API's.</p></div>
                 </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Computer onderhoud/reparatie</h3><p>Service at School, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2015–2016</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Onderhoud en reparatie van computers voor de school.</p></div>
             </div>
 
-            <!-- Skill: CSS3 -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🎨</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">CSS3</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="90"></div>
+        <h2 class="section-title" style="margin-top:4rem">Werkervaring</h2>
+        <div class="card expandable">
+          <div class="card-content"><h3>Klantenservice (Technische afdeling)</h3><p>Ziggo, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2023–2024</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Oplossen van technische problemen voor Ziggo-klanten en ondersteuning bij het gebruik van Ziggo-producten.</p></div>
                         </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Orderpicker</h3><p>Prometeus, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2022–2023</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Inpakken en sorteren van orders voor Prometeus, een bedrijf dat voedingsmiddelen levert.</p></div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Skill: JavaScript -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🚀</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">JavaScript</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="75"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: React -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">⚛️</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">React</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="80"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: PHP -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🐘</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">PHP</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="85"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: Laravel -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🛠️</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">Laravel</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="90"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: SQL -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🗃️</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">SQL</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="85"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: C++ -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">💻</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">C++</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="70"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skill: C# -->
-            <div class="p-6 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <div class="flex items-center space-x-4">
-                    <span class="text-4xl text-blue-400">🔵</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-bold text-gray-100">C#</h3>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative overflow-hidden">
-                            <div class="progress-bar bg-blue-400 h-2.5 rounded-full absolute top-0 left-0 w-0" data-progress="60"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Orderpicker</h3><p>Bidfood, Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2019–2022</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Inpakken en sorteren van orders voor Bidfood, een bedrijf dat voedingsmiddelen levert.</p></div>
         </div>
+        <div class="card expandable">
+          <div class="card-content"><h3>Programmeur/Fotograaf</h3><p>Eigen onderneming (voorheen Merpho), Emmen</p></div>
+          <div class="card-date-wrapper"><span class="card-date">2018–heden</span><div class="card-icon"><i data-feather="plus"></i></div></div>
+          <div class="card-details"><p>Ontwikkeling van software en fotografie voor eigen onderneming.</p></div>
     </div>
 </section>
 
-<!-- Script for Progress Bar Animation -->
-<script>
-    // Intersection Observer to trigger animations
-    const progressBars = document.querySelectorAll('.progress-bar');
+      <!-- Certificates -->
+      <section id="certificates" data-aos="fade-up">
+        <h2 class="section-title">Certificaten</h2>
+        <div class="grid">
+          <div class="grid-item" data-cert="EssentialSecurity"><img src="images/EssentialSecurity.png" alt="EssSec" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="EssentialSpecialties"><img src="images/EssentialSpecialties.png" alt="EssSpec" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="SafeInternet"><img src="images/SafeInternet.png" alt="SafeNet" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="SafeInternetPlus"><img src="images/SafeInternetPlus.png" alt="SafePlus" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="SecuritySpecialist"><img src="images/SecuritySpecialist.png" alt="SecSpec" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="Cpp"><img src="images/c++.jpg" alt="C++" /><div class="overlay">Bekijk</div></div>
+          <div class="grid-item" data-cert="OnlineMarketing"><img src="images/onlineMarketing.png" alt="Marketing" /><div class="overlay">Bekijk</div></div>
+                </div>
+            </section>
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const progressBar = entry.target;
-                    const progress = progressBar.getAttribute('data-progress');
-                    progressBar.style.width = `${progress}%`;
-                    progressBar.style.transition = 'width 2s ease-in-out'; // Adjust animation speed here
-                    observer.unobserve(progressBar); // Stop observing after animation
-                }
+      <!-- Assignments -->
+      <section id="assignments" data-aos="fade-up">
+        <h2 class="section-title">Opdrachten</h2>
+        <div class="grid">
+          <div class="grid-item" data-assignment="Edumundo"><img src="images/edomundo.png" alt="Edumundo" /><div class="overlay">Open</div></div>
+          <div class="grid-item" data-assignment="POP"><img src="images/pop.png" alt="POP" /><div class="overlay">Open</div></div>
+          <div class="grid-item" data-assignment="Reflection"><img src="images/zelfreflectie.jpg" alt="Reflection" /><div class="overlay">Open</div></div>
+          <div class="grid-item" data-assignment="CV"><img src="images/img-1.jpg" alt="CV" /><div class="overlay">Open</div></div>
+                </div>
+            </section>
+
+      <!-- Contact -->
+      <section id="contact" data-aos="fade-up">
+        <h2 class="section-title">Contact</h2>
+        <p>Mail mij op <a href="mailto:jarno.bachmann1@student.nhlstenden.nl">jarno.bachmann1@student.nhlstenden.nl</a> of stuur een bericht via LinkedIn.</p>
+            </section>
+
+      <footer style="text-align:center;padding:4rem 0;color:var(--sub)">&copy; <script>document.write(new Date().getFullYear())</script> Yarno Bachmann</footer>
+    </main>
+                    </div>
+
+  <!-- Modal overlay -->
+  <div id="overlay">
+    <div class="modal">
+      <span class="close">&times;</span>
+      <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize animations
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50, // Start animation a bit sooner
+      });
+
+      // Initialize icons
+      feather.replace();
+
+      // Correct smooth scrolling for sidebar navigation
+      document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            // Scroll to the top of the section, not the title
+            const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+            const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            // Use a fixed offset that matches the hero scroll for consistency
+            const offset = 4 * rem;
+
+            window.scrollTo({
+              top: elementTop - offset,
+              behavior: 'smooth'
             });
-        },
-        {
-            threshold: 0.5, // Trigger when 50% of the element is visible
-        }
-    );
 
-    progressBars.forEach((bar) => {
-        observer.observe(bar);
+            // Optional: Update URL hash without jumping
+            if (history.pushState) {
+              history.pushState(null, null, targetId);
+                    } else {
+              location.hash = targetId;
+            }
+          }
+        });
+      });
+
+      // Modal logic for certificates and assignments
+      const overlay = document.getElementById('overlay');
+      const iframe = overlay.querySelector('iframe');
+      const closeBtn = overlay.querySelector('.close');
+
+      const openModal = (src) => {
+        if (!src) return;
+        iframe.src = src;
+        overlay.classList.add('active');
+        document.body.classList.add('modal-open');
+      };
+
+      const closeModal = () => {
+        overlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        iframe.src = ''; // Stop video/pdf loading
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          closeModal();
+        }
+      });
+
+      const certMap = { EssentialSecurity: 'EssentialSecurity.pdf', EssentialSpecialties: 'EssentialSpecialties.pdf', SafeInternet: 'SafeInternet.pdf', SafeInternetPlus: 'SafeInternetPlus.pdf', SecuritySpecialist: 'SecuritySpecialist.pdf', Cpp: 'c++.pdf', OnlineMarketing: 'onlineMarketing.pdf' };
+      document.querySelectorAll('[data-cert]').forEach(item => {
+        item.addEventListener('click', () => openModal(`./certificate/${certMap[item.dataset.cert]}`));
+      });
+
+      const assignmentMap = { Edumundo: 'Edumundo.pdf', POP: 'pop.pdf', Reflection: 'Reflectieverslag 2.4.pdf', CV: 'CV 2025.pdf' };
+      document.querySelectorAll('[data-assignment]').forEach(item => {
+        item.addEventListener('click', () => openModal(`./project/new/${assignmentMap[item.dataset.assignment]}`));
+      });
+
+      // Expandable card logic
+      document.querySelectorAll('.card.expandable').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('active');
+        });
+      });
+
+      // Simplified Hero scroll-to-about logic using viewport height
+      const heroScrollHandler = (e) => {
+        if (window.scrollY < 10 && e.deltaY > 0) {
+          e.preventDefault();
+          window.scrollTo({
+            top: window.innerHeight, // Scroll down by exactly the viewport height
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      const mainScrollHandler = () => {
+        if (window.scrollY < 10) {
+          window.addEventListener('wheel', heroScrollHandler, { passive: false });
+        } else {
+          window.removeEventListener('wheel', heroScrollHandler);
+        }
+      };
+
+      // Attach listeners
+      window.addEventListener('scroll', mainScrollHandler, { passive: true });
+      // Initial check
+      if (window.scrollY < 10) {
+        window.addEventListener('wheel', heroScrollHandler, { passive: false });
+      }
+
+      // Staggered animation for the name in the hero section
+      const animatedNameSpans = document.querySelectorAll('.name-animated');
+      animatedNameSpans.forEach((span, index) => {
+        span.style.animationDelay = `${index * 0.1}s`;
+        span.classList.add('fall-in');
+      });
+
+      // Re-trigger animation on hover
+      const nameContainer = document.querySelector('.name-hover-trigger');
+      nameContainer.addEventListener('mouseenter', () => {
+        animatedNameSpans.forEach(span => {
+          span.classList.remove('fall-in');
+          void span.offsetWidth; // Trigger a reflow to reset animation
+          span.classList.add('fall-in');
+        });
+      });
+
     });
-</script>
-
-            <!-- Custom CSS for Progress Bar Animation -->
-            <style>
-                @keyframes progress {
-                    0% {
-                        width: 0;
-                    }
-
-                    100% {
-                        width: var(--progress-width);
-                    }
-                }
-
-                .animate-progress {
-                    animation: progress 1.5s ease-out forwards;
-                }
-
-                /* Add a delay to each progress bar for a staggered effect */
-                .animate-progress:nth-child(1) {
-                    animation-delay: 0.2s;
-                }
-
-                .animate-progress:nth-child(2) {
-                    animation-delay: 0.4s;
-                }
-
-                .animate-progress:nth-child(3) {
-                    animation-delay: 0.6s;
-                }
-
-                .animate-progress:nth-child(4) {
-                    animation-delay: 0.8s;
-                }
-            </style>
-
-            <!-- Education Section -->
-            <section id="Edu" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">Education</h2>
-                    <div class="mt-8 space-y-4">
-                        <!-- Education Item 1 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education1')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Bachelor of Science in Informatics</h3>
-                                    <p class="text-gray-400">NHL Stenden, Emmen | 2023 - Present</p>
-                                </div>
-                                <span id="education1-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education1-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I’m currently studying for a Bachelor’s degree in Informatics, focusing on
-                                    full-stack development. The program covers topics like software engineering, web
-                                    development, and database management. I’m working on projects to improve my skills
-                                    in both front-end and back-end technologies.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 2 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education2')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Bachelor of Education in Technical
-                                        Vocational Training</h3>
-                                    <p class="text-gray-400">Windesheim University, Zwolle | 2020 - 2022</p>
-                                </div>
-                                <span id="education2-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education2-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I spent two years in a teaching program focused on technical subjects like hardware
-                                    and software. While I enjoyed the technical side, I realized that teaching in a
-                                    classroom wasn’t for me. This experience helped me decide to focus on software
-                                    development instead.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 3 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education3')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Bachelor of Education in Primary School
-                                        Teaching</h3>
-                                    <p class="text-gray-400">NHL Stenden, Emmen | 2020 - 2020</p>
-                                </div>
-                                <span id="education3-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education3-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I briefly studied to become a primary school teacher. While I liked teaching, I
-                                    wanted to combine it with my interest in programming. Since primary school wasn’t
-                                    the right fit for that, I decided to explore other options.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 4 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education4')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Level 4 Application Developer</h3>
-                                    <p class="text-gray-400">Drenthe College, Emmen | 2016 - 2019</p>
-                                </div>
-                                <span id="education4-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education4-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I completed a vocational program in application development, where I learned
-                                    programming languages like Java, C#, and PHP, as well as web development and
-                                    database design. This program gave me a strong foundation in software development
-                                    and confirmed my interest in the field.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 5 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education5')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Level 4 Network Administration</h3>
-                                    <p class="text-gray-400">Drenthe College, Emmen | 2015 - 2016</p>
-                                </div>
-                                <span id="education5-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education5-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I studied network administration for a year but realized I was more interested in
-                                    programming than hardware and networks. This helped me focus on pursuing a career in
-                                    software development.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Education Item 6 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('education6')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Secondary School - Technical Track</h3>
-                                    <p class="text-gray-400">Carmel College, Emmen | 2011 - 2015</p>
-                                </div>
-                                <span id="education6-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="education6-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    I graduated from secondary school with a focus on technical subjects like math,
-                                    physics, and computer science. This early exposure to technology sparked my interest
-                                    in programming and set the stage for my future studies.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- JavaScript for Expandable Education -->
-            <script>
-                function toggleEducation(educationId) {
-                    const content = document.getElementById(`${educationId}-content`);
-                    const icon = document.getElementById(`${educationId}-icon`);
-
-                    if (content.classList.contains('hidden')) {
-                        content.classList.remove('hidden');
-                        icon.textContent = '➖'; // Minus icon when expanded
-                    } else {
-                        content.classList.add('hidden');
-                        icon.textContent = '➕'; // Plus icon when collapsed
-                    }
-                }
-            </script>
-            <!-- Internships Section -->
-            <section id="Intern" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">Internships</h2>
-                    <div class="mt-8 space-y-4">
-                        <!-- Internship Item 1 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('Internships1')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Teacher</h3>
-                                    <p class="text-gray-400">Drenthe College, Emmen | 2020 - 2022</p>
-                                </div>
-                                <span id="Internships1-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="Internships1-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    During this internship, I taught various topics on demand, including PHP
-                                    programming, internship preparation, and other technical subjects. It was a great
-                                    opportunity to develop my communication and teaching skills while sharing my
-                                    knowledge with students.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Internship Item 2 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('Internships2')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Developer</h3>
-                                    <p class="text-gray-400">Dhevak, Emmen | 2019 - 2019</p>
-                                </div>
-                                <span id="Internships2-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="Internships2-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    This was my graduation internship, where I worked on creating an augmented reality
-                                    (AR) application using Unity. The project focused on promoting culture and tourism
-                                    in Emmen. It was a challenging but rewarding experience that allowed me to explore
-                                    AR technology and its applications.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Internship Item 3 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('Internships3')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Full-Stack Developer</h3>
-                                    <p class="text-gray-400">Dhevak, Emmen | 2017 - 2017</p>
-                                </div>
-                                <span id="Internships3-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="Internships3-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    In this role, I worked on both front-end and back-end development using Laravel. I
-                                    contributed to several client projects and also developed a learning platform to
-                                    help future interns get started with Laravel. This internship helped me build a
-                                    strong foundation in full-stack development.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Internship Item 4 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('Internships4')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Computer Repair and Service</h3>
-                                    <p class="text-gray-400">Service at School, Emmen | 2016 - 2016</p>
-                                </div>
-                                <span id="Internships4-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="Internships4-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    At this service desk, I repaired computers and performed tasks like installing
-                                    operating systems (e.g., Windows) and preparing devices for use. This internship
-                                    gave me hands-on experience with hardware and software troubleshooting, which was a
-                                    valuable addition to my technical skills.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Internship Item 5 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleEducation('Internships5')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Computer Repair and Service</h3>
-                                    <p class="text-gray-400">Service at School, Emmen | 2015 - 2015</p>
-                                </div>
-                                <span id="Internships5-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="Internships5-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Similar to my 2016 internship, I worked at a service desk where I repaired computers
-                                    and performed tasks like installing operating systems and setting up devices. This
-                                    experience helped me develop a solid understanding of computer hardware and software
-                                    maintenance.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- JavaScript for Expandable Internships -->
-            <script>
-                function toggleEducation(InternshipsId) {
-                    const content = document.getElementById(`${InternshipsId}-content`);
-                    const icon = document.getElementById(`${InternshipsId}-icon`);
-
-                    if (content.classList.contains('hidden')) {
-                        content.classList.remove('hidden');
-                        icon.textContent = '➖'; // Minus icon when expanded
-                    } else {
-                        content.classList.add('hidden');
-                        icon.textContent = '➕'; // Plus icon when collapsed
-                    }
-                }
-            </script>
-            <!-- Experience Section -->
-            <section id="Exp" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">Experience</h2>
-                    <div class="mt-8 space-y-4">
-
-                        <!-- Experience Item 1 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience1')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Developer, Yarno Bachmann Emmen</h3>
-                                    <p class="text-gray-400">2024 - Present</p>
-                                </div>
-                                <span id="experience1-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience1-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Currently working as a developer, focusing on building and maintaining VR software
-                                    and webdevelopment. My role involves collaborating with a partner to design,
-                                    develop, and implement applications that improve de educational system. I’m also
-                                    continuously improving my skills in full-stack development and exploring new
-                                    technologies.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 2 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience2')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Order Picker, Bidfood Emmen</h3>
-                                    <p class="text-gray-400">Summer Job 2024 - 2024</p>
-                                </div>
-                                <span id="experience2-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience2-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Worked as an order picker during the summer, ensuring accurate and timely
-                                    preparation of orders. This role required strong attention to detail, teamwork, and
-                                    the ability to work efficiently in a fast-paced environment. It was a great
-                                    opportunity to develop my organizational and time-management skills.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 3 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience3')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Customer Service, Ziggo</h3>
-                                    <p class="text-gray-400">2023 - 2024</p>
-                                </div>
-                                <span id="experience3-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience3-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Provided customer support for Ziggo, assisting clients with technical issues,
-                                    billing inquiries, and service upgrades. This role helped me improve my
-                                    communication and problem-solving skills while working in a dynamic and
-                                    customer-focused environment.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 4 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience4')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Order Picker, Prometeus Emmen</h3>
-                                    <p class="text-gray-400">2022 - 2023</p>
-                                </div>
-                                <span id="experience4-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience4-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Worked as an order picker, ensuring the accurate and efficient preparation of
-                                    orders. This role required strong organizational skills, attention to detail, and
-                                    the ability to work under tight deadlines. It was a valuable experience in logistics
-                                    and teamwork.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 5 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience5')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Order Picker, Bidfood Emmen</h3>
-                                    <p class="text-gray-400">2019 - 2020</p>
-                                </div>
-                                <span id="experience5-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience5-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Worked as an order picker, ensuring the accurate and timely preparation of orders.
-                                    This role helped me develop strong organizational skills and the ability to work
-                                    efficiently in a fast-paced environment. It was a great introduction to the
-                                    logistics industry.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Experience Item 6 -->
-                        <div class="bg-gray-800 rounded-lg shadow">
-                            <button onclick="toggleExperience('experience6')"
-                                class="w-full text-left p-6 flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-100">Developer & Photographer, Merpho Emmen
-                                    </h3>
-                                    <p class="text-gray-400">2018 - 2019</p>
-                                </div>
-                                <span id="experience6-icon" class="text-2xl text-gray-400">➕</span>
-                            </button>
-                            <div id="experience6-content" class="px-6 pb-6 hidden">
-                                <p class="text-gray-300">
-                                    Combined my passion for technology and photography in this role. As a developer, I
-                                    worked on web development projects, while as a photographer, I captured high-quality
-                                    images for clients. This experience allowed me to explore both creative and
-                                    technical aspects of my skill set.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- JavaScript for Expandable Experience -->
-            <script>
-                function toggleExperience(experienceId) {
-                    const content = document.getElementById(`${experienceId}-content`);
-                    const icon = document.getElementById(`${experienceId}-icon`);
-
-                    if (content.classList.contains('hidden')) {
-                        content.classList.remove('hidden');
-                        icon.textContent = '➖'; // Minus icon when expanded
-                    } else {
-                        content.classList.add('hidden');
-                        icon.textContent = '➕'; // Plus icon when collapsed
-                    }
-                }
-            </script>
-
-            <!-- Certificates Section -->
-            <section id="Certif" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">Certificates</h2>
-                    <p class="text-center text-gray-400 mt-4">Here are some of the certificates I've earned.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                        <!-- Certificate 1 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate1')">
-                            <img src="images/EssentialSecurity.png" alt="Certificate 1"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 2 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate2')">
-                            <img src="images/EssentialSpecialties.png" alt="Certificate 2"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 3 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate3')">
-                            <img src="images/SafeInternet.png" alt="Certificate 3"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 4 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate4')">
-                            <img src="images/SafeInternetPlus.png" alt="Certificate 4"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 5 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate5')">
-                            <img src="images/SecuritySpecialist.png" alt="Certificate 5"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 6 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate6')">
-                            <img src="images/c++.jpg" alt="Certificate 6"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-
-                        <!-- Certificate 7 -->
-                        <div class="relative group cursor-pointer" onclick="openCertificateModal('certificate7')">
-                            <img src="images/onlineMarketing.png" alt="Certificate 7"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Certificate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certificate Modal -->
-            <div id="certificateModal"
-                class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-                <div class="bg-gray-800 rounded-lg w-full max-w-2xl p-6 relative mx-4">
-                    <!-- Close Button -->
-                    <button onclick="closeCertificateModal()"
-                        class="absolute top-4 right-4 text-gray-400 hover:text-gray-100 text-3xl">
-                        &times;
-                    </button>
-
-                    <!-- Fullscreen Button -->
-                    <button onclick="toggleFullscreen('certificateIframe')"
-                        class="absolute top-4 right-16 text-gray-400 hover:text-gray-100 text-3xl">
-                        ⛶
-                    </button>
-
-                    <!-- Modal Content -->
-                    <div id="certificateModalContent" class="flex-1 overflow-y-auto">
-                        <!-- Content will be dynamically inserted here -->
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                function openCertificateModal(certificateId) {
-                    const modal = document.getElementById('certificateModal');
-                    const modalContent = document.getElementById('certificateModalContent');
-
-                    modalContent.innerHTML = '';
-
-                    if (certificateId === 'certificate1') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Essential Security Certificate</h3>
-                <p class="text-gray-300 mt-2">This certificate demonstrates my knowledge in essential security practices.</p>
-                <iframe id="certificateIframe" src="./certificate/EssentialSecurity.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate2') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Essential Specialties Certificate</h3>
-                <p class="text-gray-300 mt-2">This certificate showcases my expertise in specialized security areas.</p>
-                <iframe id="certificateIframe" src="./certificate/EssentialSpecialties.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate3') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Safe Internet Certificate</h3>
-                <p class="text-gray-300 mt-2">This certificate highlights my understanding of safe internet practices.</p>
-                <iframe id="certificateIframe" src="./certificate/SafeInternet.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate4') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Safe Internet Plus Certificate</h3>
-                <p class="text-gray-300 mt-2">This certificate demonstrates advanced knowledge in internet safety.</p>
-                <iframe id="certificateIframe" src="./certificate/SafeInternetPlus.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate5') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Security Specialist Certificate</h3>
-                <p class="text-gray-300 mt-2">This certificate demonstrates advanced knowledge in internet specialty.</p>
-                <iframe id="certificateIframe" src="./certificate/SecuritySpecialist.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate6') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Udemy Unreal Engine 5 C++</h3>
-                <p class="text-gray-300 mt-2">A course I followed in Unreal Engine 5 with c++.</p>
-                <iframe id="certificateIframe" src="./certificate/c++.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    } else if (certificateId === 'certificate7') {
-                        modalContent.innerHTML = `
-                <h3 class="text-2xl font-bold text-gray-100">Online Marketing course Google.</h3>
-                <p class="text-gray-300 mt-2">This certificate demonstrates advanced knowledge in internet specialty.</p>
-                <iframe id="certificateIframe" src="./certificate/onlineMarketing.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe>
-            `;
-                    }
-
-                    modal.classList.remove('hidden');
-                }
-
-                function closeCertificateModal() {
-                    const modal = document.getElementById('certificateModal');
-                    modal.classList.add('hidden');
-                }
-
-                // Fullscreen Toggle Function
-                function toggleFullscreen(iframeId) {
-                    const iframe = document.getElementById(iframeId);
-                    if (!iframe) return;
-
-                    if (!document.fullscreenElement) {
-                        if (iframe.requestFullscreen) {
-                            iframe.requestFullscreen();
-                        } else if (iframe.mozRequestFullScreen) { // Firefox
-                            iframe.mozRequestFullScreen();
-                        } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                            iframe.webkitRequestFullscreen();
-                        } else if (iframe.msRequestFullscreen) { // IE/Edge
-                            iframe.msRequestFullscreen();
-                        }
-                    } else {
-                        if (document.exitFullscreen) {
-                            document.exitFullscreen();
-                        } else if (document.mozCancelFullScreen) { // Firefox
-                            document.mozCancelFullScreen();
-                        } else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera
-                            document.webkitExitFullscreen();
-                        } else if (document.msExitFullscreen) { // IE/Edge
-                            document.msExitFullscreen();
-                        }
-                    }
-                }
-            </script>
-
-            <!-- School Assignments Section -->
-            <section id="Assignment" class="py-20 bg-gray-900">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-100">School Assignments</h2>
-                    <p class="text-center text-gray-400 mt-4">Explore the assignments I've completed as part of my
-                        Professional Skills course.</p>
-                    <!-- Assignment 1 -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"> 
-                        
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment1')">
-                            <p class="text-center text-gray-400"><b>Ethics</b></p> 
-                            <img
-                                src="images/etiek.jpg" alt="Assignment 1" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span> </div>
-                        </div>
-
-                        <!-- Assignment 2 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment2')">
-                            <p class="text-center text-gray-400"><b>Edomundo</b></p> 
-                            <img src="images/edomundo.png" alt="Assignment 2"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 3 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment3')">
-                            <p class="text-center text-gray-400"><b>Research</b></p> 
-                            <img src="images/research.png" alt="Assignment 3"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 4 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment4')">
-                            <p class="text-center text-gray-400"><b>Burndown Charts</b></p> 
-                            <img src="images/Burndown.png" alt="Assignment 4"
-                                class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 5 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment5')">
-                            <p class="text-center text-gray-400"><b>POP With proof</b></p> 
-                            <img src="images/pop.png" alt="Assignment 5" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 6 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment6')">
-                            <p class="text-center text-gray-400"><b>Reflection paper</b></p> 
-                            <img src="images/zelfreflectie.jpg" alt="Assignment 6" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 7 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment7')">
-                            <p class="text-center text-gray-400"><b>Feedback</b></p> 
-                            <img src="images/feedback.jpg" alt="Assignment 7" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-
-                        <!-- Assignment 8 -->
-                        <div class="relative group cursor-pointer" onclick="openAssignmentModal('assignment8')">
-                            <p class="text-center text-gray-400"><b>English</b></p> 
-                            <img src="images/engels.jpg" alt="Assignment 8" class="w-full h-64 object-cover rounded-lg">
-                            <div
-                                class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                                <span class="text-white text-lg font-bold">View Assignment</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- Assignment Modal -->
-            <div id="assignmentModal"
-                class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-                <div class="bg-gray-800 rounded-lg w-full max-w-2xl p-6 relative mx-4"> <!-- Close Button --> <button
-                        onclick="closeAssignmentModal()"
-                        class="absolute top-4 right-4 text-gray-400 hover:text-gray-100 text-3xl"> &times; </button>
-
-                    <!-- Fullscreen Button -->
-                    <button onclick="toggleFullscreen('assignmentIframe')"
-                        class="absolute top-4 right-16 text-gray-400 hover:text-gray-100 text-3xl">
-                        ⛶
-                    </button>
-
-                    <!-- Modal Content -->
-                    <div id="assignmentModalContent" class="flex-1 overflow-y-auto">
-                        <!-- Content will be dynamically inserted here -->
-                    </div>
-                </div>
-            </div>
-            <script> 
-                    function openAssignmentModal(assignmentId) {
-        const modal = document.getElementById('assignmentModal');
-        const modalContent = document.getElementById('assignmentModalContent');
-        modalContent.innerHTML = '';
-        if (assignmentId === 'assignment1') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Ethics: All 4 ethics assignments: 2 presentations, 1 mindmap and proscons of killer drones.</h3> <p class="text-gray-300 mt-2">All completed ethics assignments</p> <iframe id="assignmentIframe" src="./project/Etiek.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment2') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Edomundo Portfolio</h3> <p class="text-gray-300 mt-2">A collection of assignments completed during the first semester.</p> <iframe id="assignmentIframe" src="./project/edomundo.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment3') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Research Proposal</h3> <p class="text-gray-300 mt-2">A comprehensive research proposal developed as part of the course.</p> <iframe id="assignmentIframe" src="./project/Onderzoeksvoorstel.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment4') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Burndown Chart</h3> <p class="text-gray-300 mt-2">A visual representation of project progress using a burndown chart.</p> <iframe id="assignmentIframe" src="./project/BurndownChart.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment5') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Personal Development Plan (POP) And proof of finishing</h3> <p class="text-gray-300 mt-2">A signed and completed Personal Development Plan outlining my growth objectives and de proof of finishing</p> <iframe id="assignmentIframe" src="./project/POP.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        }  else if (assignmentId === 'assignment6') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Reflection</h3> <p class="text-gray-300 mt-2">A self reflection about semester 1 of year 2</p> <iframe id="assignmentIframe" src="./project/Reflectieverslag.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment7') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Feedback</h3> <p class="text-gray-300 mt-2">Feedback from all the project members of semester 1.</p> <iframe id="assignmentIframe" src="./project/Feedback.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        } else if (assignmentId === 'assignment8') {
-            modalContent.innerHTML = ` <h3 class="text-2xl font-bold text-gray-100">Engels</h3> <p class="text-gray-300 mt-2">Feedback from the English lessons.</p> <iframe id="assignmentIframe" src="./project/English.pdf" class="w-full h-96 mt-4 rounded-lg" frameborder="0" allowfullscreen></iframe> `;
-        }
-        modal.classList.remove('hidden');
-    }
-
-    function closeAssignmentModal() {
-        const modal = document.getElementById('assignmentModal');
-        modal.classList.add('hidden');
-    }
-    
     </script>    
-</div>
-
 </body>
-
 </html>
