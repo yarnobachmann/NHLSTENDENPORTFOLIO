@@ -408,6 +408,21 @@ section{padding:3rem 0;}
   #photography {
     padding: 2rem 0.5rem;
   }
+  
+  /* Hide hero logo on mobile */
+  .hero-logo {
+    display: none;
+  }
+  
+  /* Better text wrapping for hero title on mobile */
+  #hero h1 {
+    line-height: 1.2;
+  }
+  
+  #hero h1 .name-hover-trigger {
+    display: block;
+    margin-top: 0.5rem;
+  }
 }
 
 /* Enhanced Modal/Lightbox */
