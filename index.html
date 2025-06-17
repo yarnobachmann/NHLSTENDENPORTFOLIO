@@ -218,6 +218,13 @@
               <p>CV 2025</p>
             </div>
           </div>
+          <div class="grid-item" data-assignment="Feedback">
+            <img src="images/feedback.jpg" alt="Feedback Opdrachtgever" />
+            <div class="overlay">
+              <h3>Feedback Opdrachtgever</h3>
+              <p>Beoordeling</p>
+            </div>
+          </div>
                 </div>
             </section>
 
@@ -606,7 +613,7 @@
         item.addEventListener('click', () => openModal(`./certificate/${certMap[item.dataset.cert]}`));
       });
 
-      const assignmentMap = { Edumundo: 'Edumundo.pdf', POP: 'pop.pdf', Reflection: 'Reflectieverslag 2.4.pdf', CV: 'CV 2025.pdf' };
+      const assignmentMap = { Edumundo: 'Edumundo.pdf', POP: 'pop.pdf', Reflection: 'Reflectieverslag 2.4.pdf', CV: 'CV 2025.pdf', Feedback: 'feedback opdrachtgever.pdf' };
       document.querySelectorAll('[data-assignment]').forEach(item => {
         item.addEventListener('click', () => openModal(`./project/${assignmentMap[item.dataset.assignment]}`));
       });
