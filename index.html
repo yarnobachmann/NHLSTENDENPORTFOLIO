@@ -225,6 +225,70 @@
               <p>Beoordeling</p>
             </div>
           </div>
+          <div class="grid-item" data-assignment="FeedbackBram">
+            <img src="images/feedback.jpg" alt="Feedback Bram" />
+            <div class="overlay">
+              <h3>Feedback Bram</h3>
+              <p>Peer Review</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="FeedbackBryan">
+            <img src="images/feedback.jpg" alt="Feedback Bryan" />
+            <div class="overlay">
+              <h3>Feedback Bryan</h3>
+              <p>Peer Review</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="FeedbackLucas">
+            <img src="images/feedback.jpg" alt="Feedback Lucas" />
+            <div class="overlay">
+              <h3>Feedback Lucas</h3>
+              <p>Peer Review</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="FeedbackYunus">
+            <img src="images/feedback.jpg" alt="Feedback Yunus" />
+            <div class="overlay">
+              <h3>Feedback Yunus</h3>
+              <p>Peer Review</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="ResearchProposal">
+            <img src="images/research.png" alt="Onderzoeksvoorstel" />
+            <div class="overlay">
+              <h3>Onderzoeksvoorstel</h3>
+              <p>Unigarant Onderzoek</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="ResearchReport">
+            <img src="images/research.png" alt="Onderzoeksrapport" />
+            <div class="overlay">
+              <h3>Onderzoeksrapport</h3>
+              <p>Unigarant Onderzoek</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="ProjectManagement">
+            <img src="images/projectmanagement.jpg" alt="Projectmanagement" />
+            <div class="overlay">
+              <h3>Projectmanagement</h3>
+              <p>SCRUM</p>
+            </div>
+          </div>
+          <div class="grid-item" data-assignment="POPresult">
+            <img src="images/pop.png" alt="POP Resultaat" />
+            <div class="overlay">
+              <h3>POP Resultaat</h3>
+              <p>Eindresultaat</p>
+            </div>
+          </div>
+          <div class="grid-item grid-item-failed">
+            <img src="images/hogeschooltaal.jpg" alt="Hogeschooltaal" />
+            <div class="overlay">
+              <h3>Hogeschooltaal</h3>
+              <p>Niet behaald</p>
+            </div>
+            <div class="failure-cross">✗</div>
+          </div>
                 </div>
             </section>
 
@@ -613,8 +677,24 @@
         item.addEventListener('click', () => openModal(`./certificate/${certMap[item.dataset.cert]}`));
       });
 
-      const assignmentMap = { Edumundo: 'Edumundo.pdf', POP: 'pop.pdf', Reflection: 'Reflectieverslag 2.4.pdf', CV: 'CV 2025.pdf', Feedback: 'feedback opdrachtgever.pdf' };
+      const assignmentMap = { 
+        Edumundo: 'Edumundo.pdf', 
+        POP: 'pop.pdf', 
+        Reflection: 'Reflectieverslag 2.4.pdf', 
+        CV: 'CV 2025.pdf', 
+        Feedback: 'feedback opdrachtgever.pdf',
+        FeedbackBram: 'Feedbackformulier - Ingevuld door Bram.pdf',
+        FeedbackBryan: 'Feedbackformulier - Ingevuld door Bryan.pdf',
+        FeedbackLucas: 'Feedbackformulier - Ingevuld door lucas.pdf',
+        FeedbackYunus: 'Feedbackformulier - Ingevuld door Yunus.pdf',
+        ResearchProposal: 'Unigarant - Onderzoeksvoorstel.pdf',
+        ResearchReport: 'Unigarant - Onderzoeksrapport.pdf',
+        ProjectManagement: 'Scrumboard.pdf',
+        POPresult: 'POP Resultaat.pdf'
+      };
       document.querySelectorAll('[data-assignment]').forEach(item => {
+        // Skip failed assignments
+        if (item.classList.contains('grid-item-failed')) return;
         item.addEventListener('click', () => openModal(`./project/${assignmentMap[item.dataset.assignment]}`));
       });
 
